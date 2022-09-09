@@ -20,7 +20,18 @@
                     {{ $train -> Azienda }}
                     <ol>
                         <li>
-                            {{ $train -> }}
+                            Partenza: {{ $train -> SP}}
+                        </li>
+                        <li>
+                            Arrivo: {{ $train -> SA}}
+                        </li>
+                        <li>
+                            Ritardo: @if ($train->Ritardo == 0)NO @else SI
+                                    @endif
+                        </li>
+                        <li>
+                            Cancellato: @if ($train->Cancellato == 0)NO @else SI
+                                    @endif
                         </li>
                     </ol>
                 </li>
